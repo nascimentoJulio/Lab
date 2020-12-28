@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Gingado</string>
+    <string name="seja_bem_vindo_ao_gingado">Seja bem-vindx ao Gingado :)</string>
+    <string name="um_software_open_source_de_musica_feito_com_muito_carinho">Um software open source de musica feito com muito carinho</string>
+    <string name="sem_musica_a_vida_seria_um_erro">"Sem musica, a vida seria um erro"</string>
+    <string name="crie_uma_conta_ou_fa_a_login">Crie uma conta ou faça login</string>
+    <string name="login">Login</string>
+    <string name="pessoas_escutando_musica">Pessoas escutando musica</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="musicas">Musicas</string>
+    <string name="playlist">Playlist</string>
+    <string name="radio">Radio</string>
+    <string name="bem_vindx_de_volta">Seja bem-vindx de volta :)</string>
+    <string name="aleat_rio">Aleatório</string>
+    <string name="fechar">Fechar</string>
+    <string name="tocar">Tocar</string>
+    <string name="artista_desconhecido">Artista Deseconhecido</string>
+
+    <string name="que_bom_que_voc_voltou_estavamos_com_saudade_fa_a_login_e_curta_suas_playlists">Que bom que você voltou, estavamos com saudade. Faça login e curta suas playlists.</string>
+    <string name="informe_seu_email">Informe seu email</string>
+    <string name="informe_sua_senha">Informe sua senha</string>
+    <string name="ola_seja_bem_vindx_ao_gingado">Ola, seja bem-vindx ao Gingado :)</string>
+    <string name="esperamos_que_voc_encontre_tudo_o_que_precisa_aqui">Esperamos que você encontre tudo o que precisa aqui</string>
+    <string name="informe_seu_nome">Informe seu nome</string>
+    <string name="pesquisar">Pesquisar</string>
+</resources>

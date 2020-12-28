@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "107059449334",
+    "project_id": "gingado-f81f3",
+    "storage_bucket": "gingado-f81f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107059449334:android:1c10a329830fcf3e24cbd7",
+        "android_client_info": {
+          "package_name": "com.magodev.lab.gingado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107059449334-h942ijf5qk82c774n9sindng9ds78cd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.magodev.lab.gingado",
+            "certificate_hash": "e487c0b94fad14bca8bf0c88ee4c46e350530c17"
+          }
+        },
+        {
+          "client_id": "107059449334-jaa0jkfdq8mk08jnjvcudu7ecslf2imh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpgTh6Ch0jqXcQMUJhLQEm8RylfsoiN3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107059449334-jaa0jkfdq8mk08jnjvcudu7ecslf2imh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
