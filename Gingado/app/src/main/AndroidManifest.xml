@@ -32,6 +32,7 @@
         </activity>
 
         <service android:name=".ui.MainActivity" />
+        <service android:name=".services.ServiceMusicas" android:enabled="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

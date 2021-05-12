@@ -20,17 +20,7 @@ public class PlayerMusica extends AppCompatActivity {
 
 
 
-        Bundle bundle = getIntent().getExtras();
 
-        if (bundle!=null){
-            String musica = bundle.getString(Constants.BUNDLE.PASSAR_DADOS);
-            MediaPlayer mediaPlayer = MediaPlayer.create(this, Uri.parse(musica));
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer = MediaPlayer.create(this, Uri.parse(musica));
-                mediaPlayer.start();
-
-            }
         }
-        }
+}
     

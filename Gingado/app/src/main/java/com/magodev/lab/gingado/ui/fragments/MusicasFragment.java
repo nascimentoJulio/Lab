@@ -1,5 +1,6 @@
 package com.magodev.lab.gingado.ui.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.magodev.lab.gingado.model.ModeloSom;
+import com.magodev.lab.gingado.services.ServiceMusicas;
 import com.magodev.lab.gingado.ui.PlayerMusica;
 import com.magodev.lab.gingado.R;
 import com.magodev.lab.gingado.business.RegrasMusica;
@@ -70,10 +72,9 @@ public class MusicasFragment extends Fragment {
             public void passarMusicaEntreActivities(String musica) {
                 Bundle bundle = new Bundle();
                 bundle.putString(Constants.BUNDLE.PASSAR_DADOS,musica);
-                Intent intent = new Intent(getContext(), PlayerMusica.class);
+                Intent intent = new Intent(getContext(), ServiceMusicas.class);
                 intent.putExtras(bundle);
-                startActivity(intent);
-
+                root.getContext().startService(intent);
 
             }
         };
