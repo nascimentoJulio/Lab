@@ -40,9 +40,9 @@ public class ServiceMusicas extends Service {
 
         }
         Bundle bundle = intent.getExtras();
-        String teste = bundle.getString(Constants.BUNDLE.PASSAR_DADOS);
+        String music = bundle.getString(Constants.BUNDLE.SERVICE_MUSIC);
 
-        player = MediaPlayer.create(mContext, Uri.parse(teste));
+        player = MediaPlayer.create(mContext, Uri.parse(music));
         player.start();
 
         return super.onStartCommand(intent, flags, startId);

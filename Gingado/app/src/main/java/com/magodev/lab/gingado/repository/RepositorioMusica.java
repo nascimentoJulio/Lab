@@ -1,4 +1,4 @@
-package com.magodev.lab.gingado.repository.local;
+package com.magodev.lab.gingado.repository;
 
 import android.content.ContentResolver;
 

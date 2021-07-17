@@ -1,6 +1,8 @@
 package com.magodev.lab.gingado.model;
 
-public class ModeloSom {
+import java.io.Serializable;
+
+public class ModeloSom  implements Serializable {
 
     private String titulo;
 

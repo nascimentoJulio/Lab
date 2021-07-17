@@ -1,6 +1,5 @@
 package com.magodev.lab.gingado.ui.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -12,16 +11,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.magodev.lab.gingado.model.ModeloSom;
-import com.magodev.lab.gingado.services.ServiceMusicas;
-import com.magodev.lab.gingado.ui.PlayerMusica;
 import com.magodev.lab.gingado.R;
 import com.magodev.lab.gingado.business.RegrasMusica;
 import com.magodev.lab.gingado.constants.Constants;
 import com.magodev.lab.gingado.interfaces.OnListClick;
+import com.magodev.lab.gingado.model.ModeloSom;
+import com.magodev.lab.gingado.services.ServiceMusicas;
+import com.magodev.lab.gingado.ui.PlayerMusicaActivity;
 import com.magodev.lab.gingado.ui.adapter.RecyclerMusicaAdapter;
 
-import java.io.File;
 import java.util.List;
 
 
@@ -33,15 +31,7 @@ public class MusicasFragment extends Fragment {
     private RecyclerMusicaAdapter mAdapter;
     private List<ModeloSom> mMusicas;
     private ServiceConnection mServiceConnection;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public MusicasFragment() {
         // Required empty public constructor
@@ -51,11 +41,6 @@ public class MusicasFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
     }
 
     @Override
@@ -69,12 +54,22 @@ public class MusicasFragment extends Fragment {
 
         OnListClick tocarMusica = new OnListClick() {
             @Override
-            public void passarMusicaEntreActivities(String musica) {
-                Bundle bundle = new Bundle();
-                bundle.putString(Constants.BUNDLE.PASSAR_DADOS,musica);
-                Intent intent = new Intent(getContext(), ServiceMusicas.class);
-                intent.putExtras(bundle);
-                root.getContext().startService(intent);
+            public void passarMusicaEntreActivities(ModeloSom musica) {
+
+                Intent abrirActivity = new Intent(getContext(), PlayerMusicaActivity.class);
+                abrirActivity.putExtra(Constants.BUNDLE.PASSAR_OBJETO, musica);
+                root.getContext().startActivity(abrirActivity);
+
+            }
+
+            @Override
+            public void iniciarServiceMusica(String path) {
+
+                Bundle bundleService = new Bundle();
+                bundleService.putString(Constants.BUNDLE.SERVICE_MUSIC, path);
+                Intent intentService = new Intent(getContext(), ServiceMusicas.class);
+                intentService.putExtras(bundleService);
+                root.getContext().startService(intentService);
 
             }
         };

@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.PlayerMusica">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.PlayerMusicaActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:background="#00FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <ImageView
+            android:id="@+id/imagem_album"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/defaultalbumartwork" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_nome_musica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da musica"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/text_tempo_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tempo final"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_tempo_atual"
+        app:layout_constraintTop_toBottomOf="@+id/progresso_musica"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_tempo_atual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:text="tempo atual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_tempo_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progresso_musica"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/progresso_musica"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_nome_musica"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_tempo_total" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_tempo_atual" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
