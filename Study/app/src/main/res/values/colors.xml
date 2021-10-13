@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_background">#2C2C2C</color>
+    <color name="secondary_background">#6816DC</color>
+    <color name="main_text">#E6ECECEC</color>
+    <color name="secondary_text">#40E8E8E8</color>
+    <color name="completed_task">#00FA2A</color>
+    <color name="incomplete_task">#D81C1C</color>
+</resources>

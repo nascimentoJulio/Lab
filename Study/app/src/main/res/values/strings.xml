@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">!Study</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="topic">Topic</string>
+    <string name="create_task">Create Task</string>
+    <string name="select_due_date">SELECT DUE DATE</string>
+    <string name="delete_message">Successfully deleted!</string>
+    <string name="update_message">Successfully updated!</string>
+    <string name="insert_message">Successfully saved!</string>
+    <string name="search">Search</string>
+    <string name="empty_fields">One or more fields were not filled</string>
+    <string name="is_completed">IS COMPLETED</string>
+    <string name="save">Save</string>
+    <string name="empty_recycler">You have no tasks, click + to create one</string>
+</resources>
