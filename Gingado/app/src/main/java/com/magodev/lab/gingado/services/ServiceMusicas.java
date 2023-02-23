@@ -16,8 +16,9 @@ import com.magodev.lab.gingado.constants.Constants;
 import java.io.IOException;
 
 public class ServiceMusicas extends Service {
-    private MediaPlayer player = new MediaPlayer();
+    private static MediaPlayer player = new MediaPlayer();
     private Context mContext;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -34,7 +35,7 @@ public class ServiceMusicas extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
 
-        if (player.isPlaying()){
+        if (player.isPlaying()) {
             Log.d("teste", "tava tocando pia");
             player.stop();
 
@@ -46,5 +47,31 @@ public class ServiceMusicas extends Service {
         player.start();
 
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    public static void onPauseMusic() {
+        if (player.isPlaying()) {
+            Log.d("teste", "tava tocando pia");
+            player.pause();
+        }
+    }
+
+    public static void onStartMusic() {
+        if (!player.isPlaying()) {
+            Log.d("teste", "tava tocando pia");
+            player.start();
+        }
+    }
+
+    public static void onTocarProxima(String path){
+        player.stop();
+        player.reset();
+        try {
+            player.setDataSource(path);
+            player.prepare();
+            player.start();
+        } catch (IOException e) {
+            Log.i("ServiceMusic", "Erro ao tocar musica");
+        }
     }
 }

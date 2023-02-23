@@ -20,7 +20,7 @@ public class RecyclerMusicaViewHolder extends RecyclerView.ViewHolder {
         textNomemusica = itemView.findViewById(R.id.nome_musica);
 
     }
-    public void musica(final ModeloSom musica, final OnListClick tocarMusica) {
+    public void musica(final ModeloSom musica, final OnListClick tocarMusica, final int position) {
         String titulo = musica.getTitulo();
         if (titulo.length()>=20){
            titulo = titulo.replace(titulo.substring(20),"...");
@@ -30,7 +30,7 @@ public class RecyclerMusicaViewHolder extends RecyclerView.ViewHolder {
         this.textNomemusica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tocarMusica.passarMusicaEntreActivities(musica);
+                tocarMusica.passarMusicaEntreActivities(musica, position);
                 tocarMusica.iniciarServiceMusica(musica.getPath());
             }
         });

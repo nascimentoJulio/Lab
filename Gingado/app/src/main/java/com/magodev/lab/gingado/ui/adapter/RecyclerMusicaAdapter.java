@@ -1,5 +1,6 @@
 package com.magodev.lab.gingado.ui.adapter;
 
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,8 @@ public class RecyclerMusicaAdapter extends RecyclerView.Adapter<RecyclerMusicaVi
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerMusicaViewHolder holder, int position) {
-        holder.musica(listMusicas.get(position),tocarMusica);
+        holder.musica(listMusicas.get(position),tocarMusica, position);
+        Log.i("position","position" + position);
     }
 
 

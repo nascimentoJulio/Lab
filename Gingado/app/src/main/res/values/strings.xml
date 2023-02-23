@@ -23,4 +23,7 @@
     <string name="esperamos_que_voc_encontre_tudo_o_que_precisa_aqui">Esperamos que você encontre tudo o que precisa aqui</string>
     <string name="informe_seu_nome">Informe seu nome</string>
     <string name="pesquisar">Pesquisar</string>
+    <string name="ops_parece_que_voc_ainda_n_o_tem_nenhuma_playlist">Ops… Parece que você ainda \n não tem nenhuma playlist</string>
+    <string name="criar_playlist">CRIAR PLAYLIST</string>
+    <string name="garota_com_um_grande_telefone">Garota com um grande telefone</string>
 </resources>

@@ -63,7 +63,7 @@ public class PlaylistFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_playlist, container, false);
+        View root = inflater.inflate(R.layout.empty_playlist, container, false);
 
         this.mViewHolder.recyclerPlaylist = root.findViewById(R.id.recycler_playlist);
 

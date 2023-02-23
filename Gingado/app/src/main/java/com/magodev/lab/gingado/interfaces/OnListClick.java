@@ -7,7 +7,9 @@ import com.magodev.lab.gingado.model.ModeloSom;
 
 
 public interface OnListClick {
-    void passarMusicaEntreActivities (ModeloSom musica);
+    void passarMusicaEntreActivities(ModeloSom musica, int position);
 
     void iniciarServiceMusica(String path);
+
+    void tocarProxima(int position);
 }
