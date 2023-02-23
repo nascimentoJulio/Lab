@@ -26,4 +26,9 @@
     <string name="ops_parece_que_voc_ainda_n_o_tem_nenhuma_playlist">Ops… Parece que você ainda \n não tem nenhuma playlist</string>
     <string name="criar_playlist">CRIAR PLAYLIST</string>
     <string name="garota_com_um_grande_telefone">Garota com um grande telefone</string>
+    <string name="text_permission_denied">Precisamos que você nos de\npermissão para poder procurar\nsuas musicas. Você pode fazer isso\nclicando no botão abaixo.</string>
+    <string name="give_permission">DAR PERMISSÃO</string>
+    <string name="access_denied_draw_description">Pessoa com um celular</string>
+    <string name="smartab_description">musicas, playlist e radio respectivamente</string>
+    <string name="viewpager_description">Conteúdo da página escolhida</string>
 </resources>
