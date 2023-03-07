@@ -3,34 +3,28 @@ package com.magodev.lab.gingado.repository;
 import android.content.ContentResolver;
 
 import com.magodev.lab.gingado.R;
-import com.magodev.lab.gingado.model.ModeloSom;
+import com.magodev.lab.gingado.model.MusicModel;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.Collections;
-import java.util.Comparator;
-
 import android.content.Context;
 import android.net.Uri;
-import android.content.ContentResolver;
 import android.database.Cursor;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.widget.ListView;
+
 public class RepositorioMusica {
-    List <ModeloSom> mMusicas = new ArrayList<>();
+    List <MusicModel> mMusicas = new ArrayList<>();
     public RepositorioMusica(){
     }
 
 
-    public List<ModeloSom> getListaMusicas(Context context){
+    public List<MusicModel> getListaMusicas(Context context){
 
         return getMusicasDoDevice(context);
     }
 
-    private List<ModeloSom> getMusicasDoDevice(Context context){
+    private List<MusicModel> getMusicasDoDevice(Context context){
         int getArtista = 0;
         int getDuracao = 0;
         long duracao =0;
@@ -67,7 +61,7 @@ public class RepositorioMusica {
                     duracao = musicCursor.getLong(getDuracao);
                 }
 
-                this.mMusicas.add(new ModeloSom(path,titulo,artista,duracao));
+                this.mMusicas.add(new MusicModel(path,titulo,artista,duracao));
             }
 
         }

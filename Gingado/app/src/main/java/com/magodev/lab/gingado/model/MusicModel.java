@@ -2,7 +2,7 @@ package com.magodev.lab.gingado.model;
 
 import java.io.Serializable;
 
-public class ModeloSom  implements Serializable {
+public class MusicModel implements Serializable {
 
     private String titulo;
 
@@ -42,7 +42,7 @@ public class ModeloSom  implements Serializable {
     private String artista;
     private long duração;
 
-    public ModeloSom(String path, String titulo, String artista, long duracao) {
+    public MusicModel(String path, String titulo, String artista, long duracao) {
         this.titulo = titulo;
         this.path = path;
         this.artista = artista;

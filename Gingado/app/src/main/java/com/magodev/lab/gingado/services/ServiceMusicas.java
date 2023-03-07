@@ -6,12 +6,15 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.SeekBar;
 
 import androidx.annotation.Nullable;
 
 import com.magodev.lab.gingado.constants.Constants;
+import com.magodev.lab.gingado.ui.MainActivity;
 
 import java.io.IOException;
 
@@ -63,7 +66,7 @@ public class ServiceMusicas extends Service {
         }
     }
 
-    public static void onTocarProxima(String path){
+    public static void onTocarProxima(String path) {
         player.stop();
         player.reset();
         try {
@@ -73,5 +76,12 @@ public class ServiceMusicas extends Service {
         } catch (IOException e) {
             Log.i("ServiceMusic", "Erro ao tocar musica");
         }
+    }
+
+    public static int getMusicDuration(){
+        return player.getDuration();
+    }
+    public static int getCurrentMusicPosition() {
+        return player.getCurrentPosition() / 1000;
     }
 }

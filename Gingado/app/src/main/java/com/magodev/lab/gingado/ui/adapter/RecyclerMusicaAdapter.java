@@ -1,7 +1,6 @@
 package com.magodev.lab.gingado.ui.adapter;
 
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.magodev.lab.gingado.R;
 import com.magodev.lab.gingado.interfaces.OnListClick;
-import com.magodev.lab.gingado.model.ModeloSom;
+import com.magodev.lab.gingado.model.MusicModel;
 import com.magodev.lab.gingado.ui.viewholder.RecyclerMusicaViewHolder;
 
-import java.io.File;
 import java.util.List;
 
 public class RecyclerMusicaAdapter extends RecyclerView.Adapter<RecyclerMusicaViewHolder> {
-    List<ModeloSom> listMusicas;
+    List<MusicModel> listMusicas;
     OnListClick tocarMusica;
-    public RecyclerMusicaAdapter(List<ModeloSom> list, OnListClick tocarMusica){
+    public RecyclerMusicaAdapter(List<MusicModel> list, OnListClick tocarMusica){
         listMusicas = list;
         this.tocarMusica = tocarMusica;
     }
