@@ -9,7 +9,7 @@ import java.util.List;
 
 public class RegrasMusica {
     private RepositorioMusica mRepositorio;
-    public RegrasMusica(Context context){
+    public RegrasMusica(){
         this.mRepositorio = new RepositorioMusica();
     }
 

@@ -15,10 +15,10 @@ import com.magodev.lab.gingado.ui.viewholder.RecyclerMusicaViewHolder;
 
 import java.util.List;
 
-public class RecyclerMusicaAdapter extends RecyclerView.Adapter<RecyclerMusicaViewHolder> {
+public class RecyclerMusicAdapter extends RecyclerView.Adapter<RecyclerMusicaViewHolder> {
     List<MusicModel> listMusicas;
     OnListClick tocarMusica;
-    public RecyclerMusicaAdapter(List<MusicModel> list, OnListClick tocarMusica){
+    public RecyclerMusicAdapter(List<MusicModel> list, OnListClick tocarMusica){
         listMusicas = list;
         this.tocarMusica = tocarMusica;
     }

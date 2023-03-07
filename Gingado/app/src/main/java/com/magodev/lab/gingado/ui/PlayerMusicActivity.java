@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -24,7 +22,7 @@ import com.magodev.lab.gingado.utils.MusicFormatter;
 
 import java.util.ArrayList;
 
-public class PlayerMusicaActivity extends AppCompatActivity implements View.OnClickListener {
+public class PlayerMusicActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final ViewHolder mViewholder = new ViewHolder();
 
@@ -109,7 +107,7 @@ public class PlayerMusicaActivity extends AppCompatActivity implements View.OnCl
         this.mViewholder.musicProgress.setMax(MusicFormatter.getTotalSecondsFromMilliseconds(duration));
         iniciarServiceMusica(musicModel.getPath());
 
-        PlayerMusicaActivity.this.runOnUiThread(new Runnable() {
+        PlayerMusicActivity.this.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 int progress = ServiceMusicas.getCurrentMusicPosition();

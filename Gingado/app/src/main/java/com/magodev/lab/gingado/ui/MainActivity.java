@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +15,7 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.magodev.lab.gingado.R;
-import com.magodev.lab.gingado.ui.fragments.MusicasFragment;
+import com.magodev.lab.gingado.ui.fragments.MusicsFragment;
 import com.magodev.lab.gingado.ui.fragments.PlaylistFragment;
 import com.magodev.lab.gingado.ui.fragments.RadioFragment;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     private void buildInitialScreen() {
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getSupportFragmentManager(),
                 FragmentPagerItems.with(this)
-                        .add(getString(R.string.musicas), MusicasFragment.class)
+                        .add(getString(R.string.musicas), MusicsFragment.class)
                         .add(getString(R.string.playlist), PlaylistFragment.class)
                         .add(getString(R.string.radio), RadioFragment.class)
                         .create()

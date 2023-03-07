@@ -27,7 +27,7 @@ public class RecyclerMusicaViewHolder extends RecyclerView.ViewHolder {
         this.textNomemusica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tocarMusica.passarMusicaEntreActivities(musica, position);
+                tocarMusica.passMusicBetweenActivities(musica, position);
             }
         });
 
